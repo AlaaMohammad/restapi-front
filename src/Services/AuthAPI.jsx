@@ -32,7 +32,7 @@ const AuthAPI = {
     },
     logout: async () => {
         try {
-            await axios.post('http://3.81.99.252/api/logout', null, {headers: {
+            await axios.post('https://3.81.99.252/api/logout', null, {headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${localStorage.getItem('authToken')}`,
             }});
