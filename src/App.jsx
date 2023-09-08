@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import AnimeCardsList from './components/AnimeCards/AnimeCardsList';
-import PrivateRoute from './Routes/PrivateRoute';
+import PrivateRoutes from './Routes/PrivateRoutes';
 import Home from './components/Pages/Home';
 
 function App() {
@@ -14,13 +14,9 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
-      <Route path='/dashboard'
-        element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        }
-      />
+      <Route element={<PrivateRoutes/>}>
+        <Route element={<Dashboard/>} path='/dashboard' exact/>
+      </Route>
       <Route path='/cards' element={<AnimeCardsList />} />
     </Routes>
   )

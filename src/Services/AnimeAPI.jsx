@@ -4,7 +4,6 @@ const instance = axios.create({
     baseURL: 'https://kitsu.io/api/edge/',
     headers: {
         'Content-Type': 'application/json',
-        //Authorization: `Bearer ${localStorage.getItem('authToken')}`,
     }
 })
 

@@ -9,7 +9,7 @@ function AnimeCardsList() {
         const fetchAnimeData = async () => {
         try{
             const response = await AnimeAPI.getAllAnime();
-            console.log(response.data.attributes)
+            console.log(response.data)
             setAnimeLists(response.data)
         }catch(error){
             console.error(error)
