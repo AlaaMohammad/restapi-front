@@ -7,6 +7,7 @@ import Register from './components/Auth/Register';
 import AnimeCardsList from './components/AnimeCards/AnimeCardsList';
 import PrivateRoutes from './Routes/PrivateRoutes';
 import Home from './components/Pages/Home';
+import AnimeDetails from './components/AnimeCards/AnimeDetails';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/register' element={<Register />} />
       <Route element={<PrivateRoutes/>}>
         <Route element={<Dashboard/>} path='/dashboard' exact/>
+        <Route element={<AnimeDetails />} path='/anime/:animeId' exact/>
       </Route>
       <Route path='/cards' element={<AnimeCardsList />} />
     </Routes>

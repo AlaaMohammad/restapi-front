@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  --main-color: rgb(39, 255, 244);
+  --main-color: #e1e6f0;
   --font-color: rgb(221, 235, 234);
   --font-family: 'Inter', sans-serif;
   --bg-color: rgb(17, 24, 39);
@@ -17,7 +17,8 @@
   font-family: var(--font-family);
   color: var(--font-color);
 }
-body{
+
+body {
   background-color: var(--bg-color);
 }
 
@@ -92,12 +93,51 @@ main video {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
+.img-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 215px;
+  max-width: 160px;
+}
+
+.card {
+  border: none;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card .card-title {
+  position: absolute;
+  bottom: -49px;
+  color: #fff;
+  font-size: small;
+}
+
+.hero-img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    background-image: linear-gradient(180deg, rgba(31, 37, 46, 0.0) 50%, rgba(31, 37, 46, .1) 70%, rgba(31, 37, 46, 0) 80%, rgba(31, 37, 46, 0) 90%, #1f252e), linear-gradient(90deg, rgba(31, 37, 46, 0.9), rgba(31, 37, 46, .5) 50%, rgba(31, 37, 46, 0) 65%, #1f252e);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
   }
 
-  .nav-masthead {
-    float: right;
+  @media (min-width: 48em) {
+    .masthead-brand {
+      float: left;
+    }
+
+    .nav-masthead {
+      float: right;
+    }
   }
-}

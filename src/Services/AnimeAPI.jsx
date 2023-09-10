@@ -19,6 +19,16 @@ const AnimeAPI = {
         }
 
     },
+    getTrendingAnime: async () => {
+        try {
+            const reponse = await instance.get('/trending/anime')
+            return reponse.data
+        } catch (error) {
+            console.error(error)
+            throw error
+        }
+
+    },
     getAnimeById: async (animeId) => {
         try {
             const reponse = await instance.get(`/anime/${animeId}`)

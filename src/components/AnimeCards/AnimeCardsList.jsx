@@ -8,7 +8,7 @@ function AnimeCardsList() {
     useEffect(() => {
         const fetchAnimeData = async () => {
         try{
-            const response = await AnimeAPI.getAllAnime();
+            const response = await AnimeAPI.getTrendingAnime();
             console.log(response.data)
             setAnimeLists(response.data)
         }catch(error){
@@ -25,6 +25,7 @@ function AnimeCardsList() {
             <h2> Anime List</h2>
             {
             animeList && animeList.map((anime) =>(
+                
                     <AnimeCard key={anime.id} anime={anime}></AnimeCard>
             ))
         }
