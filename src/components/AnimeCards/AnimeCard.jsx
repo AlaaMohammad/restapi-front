@@ -7,7 +7,7 @@ function AnimeCard({ anime }) {
   return (
     <div className="col-md-2 col-sm-4 my-5 shadow-sm" style={{}}>
       <Link to={`/anime/${anime.id}`}>
-      <div className="card img-card" style={{
+      <div className="card img-card anime-card" style={{
         backgroundImage: `url(${anime.attributes.posterImage== null ? fallbackImage : anime.attributes.posterImage.original})`
       }}>
         <div className="card-body">
